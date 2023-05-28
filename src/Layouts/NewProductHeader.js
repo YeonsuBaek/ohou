@@ -4,8 +4,7 @@ import { ReactComponent as Logo } from '../assets/icons/logo.svg';
 import { ReactComponent as Chevron } from '../assets/icons/chevron.svg';
 import PrimaryButton from '../components/UI/Buttons/PrimaryButton';
 import styles from './NewProductHeader.module.css';
-
-const NewProductHeader = () => {
+const NewProductHeader = ({ handleAddProduct }) => {
   return (
     <header className={styles.header}>
       <div className={styles.response}>
@@ -19,9 +18,9 @@ const NewProductHeader = () => {
         <Link to='/' className='sm-hidden' aria-label='홈으로'>
           <Logo height='26' />
         </Link>
-        <Link to='/' className={styles.upload} aria-label='올리기'>
-          <PrimaryButton text='올리기' />
-        </Link>
+        <span className={styles.upload} aria-label='올리기'>
+          <PrimaryButton text='올리기' handleAddProduct={handleAddProduct} />
+        </span>
       </div>
     </header>
   );

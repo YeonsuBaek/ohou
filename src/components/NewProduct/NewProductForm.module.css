@@ -48,6 +48,7 @@
 
 .imgButton img {
   z-index: 30;
+  border-radius: 4px;
 }
 
 .imgButton input {

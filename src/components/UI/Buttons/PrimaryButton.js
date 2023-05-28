@@ -3,7 +3,10 @@ import styles from './Buttons.module.css';
 
 const PrimaryButton = (props) => {
   return (
-    <button type={props.type} className={`${styles.button} ${styles.primary}`}>
+    <button
+      className={`${styles.button} ${styles.primary}`}
+      onClick={props.handleAddProduct}
+    >
       {props.text}
     </button>
   );
