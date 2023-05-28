@@ -78,9 +78,13 @@ const Header = () => {
             )}
             <a href='/'>고객센터</a>
           </div>
-          <a href='/' aria-label='글쓰기' className={styles.writeButton}>
+          <Link
+            to='/new-product'
+            aria-label='글쓰기'
+            className={styles.writeButton}
+          >
             <PrimaryButton text='글쓰기' />
-          </a>
+          </Link>
         </div>
       </div>
     </header>
