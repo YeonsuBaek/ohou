@@ -8,10 +8,12 @@ import { auth } from '../firebase-config';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import useUserStore from '../stores/useUserStore';
 import useAdminStore from '../stores/useAdminStore';
+import useCartStore from '../stores/useCartStore';
 
 const LoginPage = () => {
   const { setUserEmail, setUserName } = useUserStore();
   const { adminID, adminPW, setAdminID, setAdminPW } = useAdminStore();
+  const { setCarts } = useCartStore();
   const navigate = useNavigate();
 
   const handleClickGoogle = () => {
@@ -20,6 +22,7 @@ const LoginPage = () => {
       .then((data) => {
         setUserEmail(data.user.email);
         setUserName(data.user.displayName);
+        setCarts(data.user.email);
         navigate('/');
       })
       .catch((err) => {

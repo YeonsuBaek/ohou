@@ -52,7 +52,7 @@ const Header = () => {
             <SearchInput />
           </div>
           <Link
-            to='/cart'
+            to={'/cart/' + userName}
             type='button'
             aria-label='장바구니'
             className={styles.button}

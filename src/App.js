@@ -33,7 +33,7 @@ function App() {
         />
         <Route path='/new-product' element={<NewProductPage />} />
         <Route path='/login' element={<LoginPage />} />
-        <Route path='/cart' element={<CartPage />} />
+        <Route path='/cart/:id' element={<CartPage />} />
       </Routes>
     </>
   );

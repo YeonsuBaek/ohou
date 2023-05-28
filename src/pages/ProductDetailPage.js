@@ -5,10 +5,22 @@ import SelectForm from '../components/UI/SelectForm';
 import PrimaryButton from '../components/UI/Buttons/PrimaryButton';
 import OutlinedButton from '../components/UI/Buttons/OutlinedButton';
 import styles from './ProductDetail.module.css';
+import useCartStore from '../stores/useCartStore';
+import useUserStore from '../stores/useUserStore';
 
 const ProductDetailPage = ({ products }) => {
+  const { userEmail } = useUserStore();
+  const { addToCart } = useCartStore();
   const { id } = useParams();
   const product = products.find((v) => v.name === id);
+
+  const handleAddToCart = () => {
+    addToCart(userEmail, {
+      name: product.name,
+      price: product.price,
+      image: product.image,
+    });
+  };
 
   return (
     <>
@@ -26,7 +38,7 @@ const ProductDetailPage = ({ products }) => {
             <div>
               <SelectForm />
               <div className={styles.buttons}>
-                <OutlinedButton text='장바구니' />
+                <OutlinedButton text='장바구니' onClick={handleAddToCart} />
                 <PrimaryButton text='구매하기 ' />
               </div>
             </div>
