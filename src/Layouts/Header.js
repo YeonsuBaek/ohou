@@ -7,6 +7,7 @@ import PrimaryButton from '../components/UI/Buttons/PrimaryButton';
 import SearchInput from '../components/UI/SearchInput';
 import styles from './Header.module.css';
 import useModalStore from '../stores/useModalStore';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const { setModal } = useModalStore();
@@ -56,7 +57,7 @@ const Header = () => {
         </div>
         <div className={`sm-hidden ${styles.userCategories}`}>
           <div className={styles.buttons}>
-            <a href='/'>로그인</a>
+            <Link to='/login'>로그인</Link>
             {/* <button type='button' className={styles.name}>
               홍길동님
             </button> */}
