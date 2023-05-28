@@ -51,14 +51,14 @@ const Header = () => {
           <div className={`lg-only ${styles.search}`}>
             <SearchInput />
           </div>
-          <a
-            href='/'
+          <Link
+            to='/cart'
             type='button'
             aria-label='장바구니'
             className={styles.button}
           >
             <Cart width='28' height='28' />
-          </a>
+          </Link>
         </div>
         <div className={`sm-hidden ${styles.userCategories}`}>
           <div className={styles.buttons}>

@@ -8,6 +8,7 @@ import ProductDetailPage from './pages/ProductDetailPage';
 import useProductStore from './stores/useProductStore';
 import NewProductPage from './pages/NewProductPage';
 import LoginPage from './pages/LoginPage';
+import CartPage from './pages/CartPage';
 
 function App() {
   const { modal, setModal } = useModalStore();
@@ -32,6 +33,7 @@ function App() {
         />
         <Route path='/new-product' element={<NewProductPage />} />
         <Route path='/login' element={<LoginPage />} />
+        <Route path='/cart' element={<CartPage />} />
       </Routes>
     </>
   );
