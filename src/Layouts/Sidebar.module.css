@@ -7,6 +7,10 @@
   background-color: #fff;
   z-index: 100;
   padding: 26px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
 }
 
 .header {
@@ -32,4 +36,10 @@
   font-size: 14px;
   font-weight: 400;
   padding-left: 8px;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
