@@ -1,7 +1,12 @@
 import './App.css';
+import Header from './Layouts/Header';
 
 function App() {
-  return <div>오늘의집 클론코딩</div>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
 
 export default App;

@@ -1,0 +1,124 @@
+.header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e2e7;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.response {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.isSelected {
+  color: #3da5f5 !important;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+    padding: 10px 40px;
+  }
+
+  .response {
+    max-width: 960px;
+  }
+
+  .logo {
+    position: static;
+    transform: none;
+    margin-right: 20px;
+  }
+
+  .categories {
+    font-size: 18px;
+    font-weight: 700;
+    flex: 1 1 0px;
+    white-space: nowrap;
+  }
+
+  .categories a {
+    padding: 21px 5px;
+    margin: 0 10px;
+    color: #3f4150;
+  }
+
+  .userCategories {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .userCategories a {
+    color: #3f4150;
+  }
+
+  .buttons {
+    padding: 0 10px 0 8px;
+  }
+
+  .buttons a {
+    padding: 0 8px;
+  }
+
+  .writeButton button {
+    height: 40px;
+    padding: 0 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 10px 60px;
+  }
+
+  .response {
+    max-width: 1140px;
+  }
+
+  .logo {
+    position: static;
+    transform: none;
+    margin-right: 20px;
+  }
+
+  .search {
+    margin-right: 12px;
+  }
+}
