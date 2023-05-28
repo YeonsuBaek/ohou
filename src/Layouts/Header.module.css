@@ -91,6 +91,10 @@
 
   .buttons {
     padding: 0 10px 0 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
   }
 
   .buttons a {
@@ -100,6 +104,22 @@
   .writeButton button {
     height: 40px;
     padding: 0 16px;
+    white-space: nowrap;
+  }
+
+  .name {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    color: #3f4150;
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 20px;
+    width: 54px;
+    cursor: pointer;
   }
 }
 

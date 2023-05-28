@@ -13,6 +13,9 @@ const Sidebar = () => {
         <a href='/' className={styles.login} aria-label='로그인'>
           <PrimaryButton text='로그인' />
         </a>
+
+        {/* NOTE: 회원 로그인 */}
+        {/* <strong className={styles.name}>홍길동님</strong> */}
       </header>
     </aside>
   );

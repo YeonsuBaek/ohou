@@ -57,6 +57,9 @@ const Header = () => {
         <div className={`sm-hidden ${styles.userCategories}`}>
           <div className={styles.buttons}>
             <a href='/'>로그인</a>
+            {/* <button type='button' className={styles.name}>
+              홍길동님
+            </button> */}
             <a href='/'>고객센터</a>
           </div>
           <a href='/' aria-label='글쓰기' className={styles.writeButton}>

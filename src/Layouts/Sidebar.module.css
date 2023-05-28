@@ -26,3 +26,10 @@
   height: 44px;
   padding: 0 16px;
 }
+
+.name {
+  color: #3f4150;
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 8px;
+}
