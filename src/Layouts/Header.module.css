@@ -121,6 +121,10 @@
     width: 54px;
     cursor: pointer;
   }
+
+  .myMenu {
+    position: relative;
+  }
 }
 
 @media screen and (min-width: 1200px) {

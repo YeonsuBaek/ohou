@@ -10,9 +10,10 @@ import useModalStore from '../stores/useModalStore';
 import { Link } from 'react-router-dom';
 import useUserStore from '../stores/useUserStore';
 import useAdminStore from '../stores/useAdminStore';
+import MyMenu from './MyMenu';
 
 const Header = () => {
-  const { setModal } = useModalStore();
+  const { setModal, myMenu, setMyMenu } = useModalStore();
   const { userEmail, userName } = useUserStore();
   const { adminID } = useAdminStore();
 
@@ -61,14 +62,17 @@ const Header = () => {
         </div>
         <div className={`sm-hidden ${styles.userCategories}`}>
           <div className={styles.buttons}>
-            {userEmail ? (
-              <button type='button' className={styles.name}>
-                {userName}님
-              </button>
-            ) : adminID ? (
-              <button type='button' className={styles.name}>
-                관리자
-              </button>
+            {userEmail || adminID ? (
+              <div className={styles.myMenu}>
+                <button
+                  type='button'
+                  className={styles.name}
+                  onClick={() => setMyMenu(!myMenu)}
+                >
+                  {userName || '관리자'}님
+                </button>
+                {myMenu && <MyMenu />}
+              </div>
             ) : (
               <Link to='/login'>로그인</Link>
             )}

@@ -37,7 +37,7 @@ const LoginPage = () => {
 
   const handleSubmitAdmin = (e) => {
     e.preventDefault();
-    console.log(`${process.env.REACT_APP_ADMIN_ID}`);
+
     if (
       adminID === `${process.env.REACT_APP_ADMIN_ID}` &&
       adminPW === `${process.env.REACT_APP_ADMIN_PW}`
