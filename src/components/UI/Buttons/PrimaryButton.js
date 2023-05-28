@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from './Buttons.module.css';
 
-const PrimaryButton = ({ text }) => {
+const PrimaryButton = (props) => {
   return (
-    <button className={`${styles.button} ${styles.primary}`}>{text}</button>
+    <button type={props.type} className={`${styles.button} ${styles.primary}`}>
+      {props.text}
+    </button>
   );
 };
 
