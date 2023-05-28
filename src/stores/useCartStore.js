@@ -13,6 +13,13 @@ const useCartStore = create((set) => ({
         [user]: prev.carts[user] ? [...prev.carts[user], product] : [product],
       },
     })),
+  removeToCart: (user, name) =>
+    set((prev) => ({
+      carts: {
+        ...prev.carts,
+        [user]: prev.carts[user].filter((item) => item.name !== name),
+      },
+    })),
 }));
 
 export default useCartStore;
