@@ -1,0 +1,53 @@
+.header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  border-bottom: 1px solid #e0e2e7;
+}
+
+.response {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back {
+  transform: rotate(90deg);
+}
+
+.upload button {
+  padding: 0 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+    padding: 0 30px;
+  }
+
+  .response {
+    max-width: 960px;
+  }
+
+  .upload button {
+    padding: 0 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .response {
+    max-width: 1140px;
+  }
+}

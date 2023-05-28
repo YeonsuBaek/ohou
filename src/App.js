@@ -6,6 +6,7 @@ import useModalStore from './stores/useModalStore';
 import { Routes, Route } from 'react-router-dom';
 import ProductDetailPage from './pages/ProductDetailPage';
 import useProductStore from './stores/useProductStore';
+import NewProductPage from './pages/NewProductPage';
 
 function App() {
   const { modal, setModal } = useModalStore();
@@ -28,6 +29,7 @@ function App() {
           path='/product/:id'
           element={<ProductDetailPage products={products} />}
         />
+        <Route path='/new-product' element={<NewProductPage />} />
       </Routes>
     </>
   );
