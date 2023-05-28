@@ -123,7 +123,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .header {
     padding: 10px 60px;
   }
