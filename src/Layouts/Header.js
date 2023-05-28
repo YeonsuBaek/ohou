@@ -6,8 +6,11 @@ import { ReactComponent as Menu } from '../assets/icons/menu.svg';
 import PrimaryButton from '../components/UI/Buttons/PrimaryButton';
 import SearchInput from '../components/UI/SearchInput';
 import styles from './Header.module.css';
+import useModalStore from '../stores/useModalStore';
 
 const Header = () => {
+  const { setModal } = useModalStore();
+
   return (
     <header className={styles.header}>
       <div className={styles.response}>
@@ -27,6 +30,7 @@ const Header = () => {
           type='button'
           aria-label='메뉴 펼치기'
           className={`sm-only ${styles.button}`}
+          onClick={() => setModal(true)}
         >
           <Menu width='28' height='28' />
         </button>
