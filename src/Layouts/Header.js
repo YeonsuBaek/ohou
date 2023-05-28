@@ -8,9 +8,11 @@ import SearchInput from '../components/UI/SearchInput';
 import styles from './Header.module.css';
 import useModalStore from '../stores/useModalStore';
 import { Link } from 'react-router-dom';
+import useUserStore from '../stores/useUserStore';
 
 const Header = () => {
   const { setModal } = useModalStore();
+  const { userEmail, userName } = useUserStore();
 
   return (
     <header className={styles.header}>
@@ -57,10 +59,13 @@ const Header = () => {
         </div>
         <div className={`sm-hidden ${styles.userCategories}`}>
           <div className={styles.buttons}>
-            <Link to='/login'>로그인</Link>
-            {/* <button type='button' className={styles.name}>
-              홍길동님
-            </button> */}
+            {userEmail ? (
+              <button type='button' className={styles.name}>
+                {userName}님
+              </button>
+            ) : (
+              <Link to='/login'>로그인</Link>
+            )}
             <a href='/'>고객센터</a>
           </div>
           <a href='/' aria-label='글쓰기' className={styles.writeButton}>

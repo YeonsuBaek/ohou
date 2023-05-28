@@ -73,6 +73,7 @@
   font-weight: 700;
   color: #858a8c;
   border: 1px solid #e0e2e7;
+  cursor: pointer;
 }
 
 .google img {
