@@ -8,9 +8,9 @@ const Sidebar = () => {
   return (
     <aside className={styles.sidebar}>
       <header className={styles.header}>
-        <a href='/' className={styles.logo} aria-label='오늘의집'>
+        <Link to='/' className={styles.logo} aria-label='오늘의집'>
           <Logo />
-        </a>
+        </Link>
         <Link to='/login' className={styles.login} aria-label='로그인'>
           <PrimaryButton text='로그인' />
         </Link>

@@ -21,16 +21,16 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.response}>
         <h1 className={styles.logo}>
-          <a href='/' aria-label='오늘의집'>
+          <Link to='/' aria-label='오늘의집'>
             <Logo height='26' />
-          </a>
+          </Link>
         </h1>
         <div className={`sm-hidden ${styles.categories}`}>
-          <a href='/'>커뮤니티</a>
-          <a href='/' className={styles.isSelected}>
+          <Link to='/'>커뮤니티</Link>
+          <Link to='/' className={styles.isSelected}>
             쇼핑
-          </a>
-          <a href='/'>이사/시공/수리</a>
+          </Link>
+          <Link to='/'>이사/시공/수리</Link>
         </div>
         <button
           type='button'
@@ -76,7 +76,7 @@ const Header = () => {
             ) : (
               <Link to='/login'>로그인</Link>
             )}
-            <a href='/'>고객센터</a>
+            <Link to='/'>고객센터</Link>
           </div>
           <Link
             to='/new-product'
