@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# 오늘의집 클론코딩
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Stacks
 
-## Available Scripts
+### Environment
 
-In the project directory, you can run:
+<img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=VisualStudioCode&logoColor=white"/>
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/>
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white"/>
 
-### `npm start`
+### Development
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black"/>
+<img src="https://img.shields.io/badge/React Router-CA4245?style=flat-square&logo=reactrouter&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS Modules-000000?style=flat-square&logo=cssmodules&logoColor=white"/>
+<img src="https://img.shields.io/badge/zustand-ffffff?style=flat-square&logo=zustand&logoColor=black"/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Functions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 1. 헤더 섹션
 
-### `npm run build`
+- 로그인 클릭 시 로그인 페이지로 이동 (모바일 버전: 좌측 메뉴 버튼 클릭)
+- 닉네임 클릭 > 로그아웃 버튼 클릭 시 로그아웃 (모바일 버전: 좌측 메뉴 버튼 클릭)
+- 장바구니 클릭 시 장바구니 페이지로 이동
+- 글쓰기 클릭 시 상품 등록 페이지로 이동
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 2. 상품 리스트 페이지
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 상품 클릭 시 상세 페이지로 이동
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 3. 상품 상세 페이지
 
-### `npm run eject`
+- 장바구니 버튼 클릭 시 장바구니에 상품 추가
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 4. 로그인 페이지
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 관리자 전용 아이디/비밀번호 입력
+- 회원 전용 구글 소셜 로그인
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### 5. 상품 등록 페이지
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- 관리자 외 접근 금지
+- 상품명, 가격, 이미지 등록
 
-## Learn More
+#### 6. 장바구니 페이지
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- 회원 이메일 당 하나의 장바구니 생성
+- 상품 추가 및 삭제
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Run it locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Requirements
 
-### Analyzing the Bundle Size
+For building and running the application you need:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[Node.js 18.13.0](https://nodejs.org/ca/blog/release/v18.13.0/)  
+[Npm 8.19.3](https://www.npmjs.com/package/npm/v/8.19.3)
 
-### Making a Progressive Web App
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+git clone https://github.com/YeonsuBaek/ohou.git
 
-### Advanced Configuration
+npm install
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Admin Login
 
-### Deployment
+.env.local
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+REACT_APP_ADMIN_ID=admin1234
+REACT_APP_ADMIN_PW=1234
+```
